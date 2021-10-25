@@ -1,0 +1,67 @@
+.label {
+    align-items: center;
+    background: #36383C;
+    border-radius: 3px;
+    color: #fff;
+    display: flex;
+    font-size: 12px;
+    font-weight: 600;
+    height: 28px;
+    margin: 0 0 4px 4px;
+    padding: 0 8px;
+
+    &--green {
+        background: #31B76A;
+    }
+
+    .circular-label {
+        background: #b8c7e0;
+    }
+
+    .circular-label.secret {
+        background: #1d4987;
+        border: 2px solid white;
+    }
+
+    .circular-label.e2ee {
+        align-items: center;
+        background: #76cf9c;
+        display: flex;
+        justify-content: center;
+    }
+
+    .circular-label.file {
+        background: #ff5630;
+    }
+
+    .circular-label.local-rec {
+        background: #ff5630;
+    }
+
+    .circular-label.stream {
+        background: #0065ff;
+    }
+
+    .circular-label.insecure {
+        background: $defaultWarningColor;
+    &--red {
+        background: #E34F56
+    }
+
+    &--white {
+        background: #fff;
+        color: #5e6d7a;
+
+        svg {
+            fill: #5e6d7a;
+        }
+    }
+}
+
+.label-text-with-icon {
+    margin-left: 8px;
+}
+
+.participants-count {
+    cursor: pointer;
+}
