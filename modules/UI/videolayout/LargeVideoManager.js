@@ -249,12 +249,13 @@ export default class LargeVideoManager {
                     const track = getTrackByMediaTypeAndParticipant(
                         state['features/base/tracks'], MEDIA_TYPE.VIDEO, id);
                     const isScreenSharing = track?.videoType === 'desktop';
-
+                    console.log("11111 isScreenSharing: ",isScreenSharing);
+                    console.log("11111 connectionStatus: ",connectionStatus);
                     if (isScreenSharing) {
                         // send the event
                         sendAnalytics(createScreenSharingIssueEvent({
                             source: 'large-video',
-                            connectionStatus,
+                            connectionStatus: 'active',
                             isVideoMuted,
                             isAudioOnly,
                             isVideoContainer,
